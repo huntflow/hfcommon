@@ -5,6 +5,7 @@ python:
 
 install:
     - python setup.py install
+    - pip install -r requirements_dev.txt
 
 script:
     - export TARGET="-m hfcommon_tests.runtests"
