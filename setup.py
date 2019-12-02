@@ -50,9 +50,9 @@ setup(
     name="hfcommon",
     version=version,
     description="Huntflow Common Library",
-    long_description=open("README.rst").read(),
-    url="https://github.com/glibin/huntflow",
-    download_url='https://github.com/glibin/huntflow/tarball/{}'.format(version),
+    long_description=open("README.md").read(),
+    url="https://github.com/huntflow/hfcommon",
+    download_url='https://github.com/huntflow/hfcommon/tarball/{}'.format(version),
     packages=find_packages(exclude=['hfcommon_tests', 'hfcommon_tests.*']),
     package_data={
 
