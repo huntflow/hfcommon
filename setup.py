@@ -9,7 +9,7 @@ from hfcommon import version
 def find_package_data(package, *directories):
     data_files = []
     current_dir = os.path.abspath(os.curdir)
-    package_dir = os.path.dirname(__import__(package, fromlist=[""]).__file__)
+    package_dir = os.path.dirname(__import__(package, fromlist=['']).__file__)
     os.chdir(package_dir)
 
     for directory in directories:
@@ -47,11 +47,11 @@ class BuildHook(build_py):
 install_requires = ['phonenumbers', 'arrow', 'python-dateutil', 'six', 'tortik']
 
 setup(
-    name="hfcommon",
+    name='hfcommon',
     version=version,
-    description="Huntflow Common Library",
-    long_description=open("README.md").read(),
-    url="https://github.com/huntflow/hfcommon",
+    description='Huntflow Common Library',
+    long_description=open('README.md').read(),
+    url='https://github.com/huntflow/hfcommon',
     download_url='https://github.com/huntflow/hfcommon/tarball/{}'.format(version),
     packages=find_packages(exclude=['hfcommon_tests', 'hfcommon_tests.*']),
     package_data={
@@ -66,8 +66,7 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.7',
     ],
 )
