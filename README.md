@@ -1,2 +1,2 @@
-# hfcommon
-Common util functions
+Huntflow Common Library
+=======================
