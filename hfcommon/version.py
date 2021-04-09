@@ -13,4 +13,4 @@ def __parse_version_from_changelog():
         return None
 
 
-version = __parse_version_from_changelog() or '0.0.7'
+version = __parse_version_from_changelog() or '0.0.8'
