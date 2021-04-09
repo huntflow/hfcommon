@@ -59,7 +59,7 @@ setup(
     },
     cmdclass={'test': TestCommand, 'build_py': BuildHook},
     install_requires=install_requires,
-    setup_requires=['nose', 'pycodestyle'],
+    setup_requires=['nose'],
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
