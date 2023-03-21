@@ -28,7 +28,13 @@ _THOUSANDS_RE = r'\B(?=(?:\d{3})+$)'
 
 
 def thousands(s, thousands_sep=' ', decimal_sep='.'):
-    sp = str(s).split(decimal_sep)
+    try:
+        s = str(s)
+    except UnicodeEncodeError:
+        # needed for PY2 cases like s = u'1000 руб'
+        pass
+
+    sp = s.split(decimal_sep)
     decimal = sp[1] if len(sp) > 1 else None
     val = re.sub(_THOUSANDS_RE, thousands_sep, sp[0])
     return val + ((decimal_sep + decimal) if decimal is not None else '')
